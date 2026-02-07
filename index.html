@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Julián Agudelo</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #eaf2ff, #f7f9fc);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            padding-bottom: 25px;
+            border-bottom: 2px solid #eef2f7;
+            flex-wrap: wrap;
+        }
+
+        .photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2563eb;
+            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 32px;
+            color: #1f2937;
+        }
+
+        .header p {
+            margin-top: 8px;
+            font-size: 16px;
+            color: #4b5563;
+        }
+
+        /* Sections */
+        h2 {
+            margin-top: 40px;
+            font-size: 22px;
+            color: #2563eb;
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #2563eb;
+            margin-top: 6px;
+            border-radius: 4px;
+        }
+
+        p {
+            line-height: 1.7;
+            margin-top: 15px;
+            color: #374151;
+        }
+
+        ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            color: #374151;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            padding: 12px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;
+            color: #1e40af;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .skill:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .header {
+                text-align: center;
+            }
+
+            .header div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <!-- CAMBIA LA RUTA SI USAS /images -->
+        <img src="images/foto.jpg" alt="Foto de Julián Agudelo" class="photo">
+
+        <div>
+            <h1>Julián Alejandro Agudelo Bedoya</h1>
+            <p>
+                Tengo 19 años, estudiante de octavo semestre de Ingeniería de Sistemas
+                en la Universidad Santiago de Cali.
+            </p>
+        </div>
+    </div>
+
+    <h2>Presentación</h2>
+    <p>
+        Estudiante de Ingeniería de Sistemas con interés en el desarrollo de software,
+        bases de datos y tecnologías modernas. Me caracterizo por mi responsabilidad,
+        aprendizaje rápido y buenas habilidades de comunicación.
+    </p>
+
+    <h2>Información Académica</h2>
+    <ul>
+        <li>
+            <strong>Ingeniería de Sistemas</strong> – Universidad Santiago de Cali  
+            <br>Octavo semestre (en curso)
+        </li>
+        <li>
+            <strong>Técnico en Contabilidad</strong> – I.E. San Francisco Javier  
+            <br>Graduado
+        </li>
+    </ul>
+
+    <h2>Experiencia Laboral</h2>
+    <ul>
+        <li>Ventas y atención al cliente en joyería</li>
+    </ul>
+
+    <h2>Habilidades Técnicas</h2>
+    <div class="skills">
+        <div class="skill">C++</div>
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+        <div class="skill">C#</div>
+        <div class="skill">Bases de Datos</div>
+        <div class="skill">React</div>
+        <div class="skill">FastAPI</div>
+    </div>
+
+    <h2>Idiomas</h2>
+    <ul>
+        <li>Español: Nativo</li>
+        <li>Inglés: Básico</li>
+    </ul>
+
+    <footer>
+        © 2026 · Hoja de Vida – Julián Agudelo
+    </footer>
+
+</div>
+
+</body>
+</html>
