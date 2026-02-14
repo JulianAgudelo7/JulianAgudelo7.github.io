@@ -1,202 +1,269 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida - Julián Agudelo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Vida</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #eaf2ff, #f7f9fc);
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #e3f2fd, #f8fbff);
+    margin: 0;
+    padding: 40px;
+}
 
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            background-color: #ffffff;
-            padding: 35px;
-            border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
-        /* Header */
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            padding-bottom: 25px;
-            border-bottom: 2px solid #eef2f7;
-            flex-wrap: wrap;
-        }
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
-        .photo {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #2563eb;
-            box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
-        }
+header img {
+    width: 160px;
+    height: 160px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid #3498db;
+}
 
-        .header h1 {
-            margin: 0;
-            font-size: 32px;
-            color: #1f2937;
-        }
+h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #2c3e50;
+}
 
-        .header p {
-            margin-top: 8px;
-            font-size: 16px;
-            color: #4b5563;
-        }
+.descripcion {
+    margin-top: 15px;
+    color: #555;
+    line-height: 1.6;
+}
 
-        /* Sections */
-        h2 {
-            margin-top: 40px;
-            font-size: 22px;
-            color: #2563eb;
-            position: relative;
-        }
+h2 {
+    margin-top: 45px;
+    color: #34495e;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 8px;
+}
 
-        h2::after {
-            content: "";
-            display: block;
-            width: 60px;
-            height: 4px;
-            background-color: #2563eb;
-            margin-top: 6px;
-            border-radius: 4px;
-        }
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 15px;
+}
 
-        p {
-            line-height: 1.7;
-            margin-top: 15px;
-            color: #374151;
-        }
+form {
+    margin-top: 15px;
+}
 
-        ul {
-            margin-top: 15px;
-            padding-left: 20px;
-        }
+input {
+    padding: 8px;
+    width: 65%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
 
-        li {
-            margin-bottom: 10px;
-            color: #374151;
-        }
+button {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
 
-        /* Skills */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 14px;
-            margin-top: 20px;
-        }
+button:hover {
+    opacity: 0.9;
+}
 
-        .skill {
-            background: linear-gradient(135deg, #eff6ff, #dbeafe);
-            padding: 12px;
-            border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            color: #1e40af;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
+.btn-agregar {
+    background-color: #3498db;
+    color: white;
+}
 
-        .skill:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-        }
+.btn-quitar {
+    background-color: #e74c3c;
+    color: white;
+    font-size: 12px;
+    padding: 5px 9px;
+    margin-left: 10px;
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 14px;
-            color: #6b7280;
-        }
+ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
 
-        /* Mobile */
-        @media (max-width: 600px) {
-            .header {
-                text-align: center;
-            }
+li {
+    margin-bottom: 10px;
+}
 
-            .header div {
-                width: 100%;
-            }
-        }
-    </style>
+.skills {
+    margin-top: 15px;
+}
+
+.skill {
+    display: inline-block;
+    background-color: #ecf0f1;
+    padding: 8px 14px;
+    margin: 6px;
+    border-radius: 8px;
+}
+
+.contacto p {
+    margin: 6px 0;
+}
+
+</style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <div class="header">
-        <img src="foto.jpg" alt="Foto de Julián Agudelo" class="photo">
-
+    <header>
+        <img src="cr.jpg" alt="Foto de perfil">
         <div>
             <h1>Julián Alejandro Agudelo Bedoya</h1>
-            <p>
-                Tengo 19 años, estudiante de octavo semestre de Ingeniería de Sistemas
-                en la Universidad Santiago de Cali.
+            <p><strong>Edad:</strong> 19 años</p>
+            <p><strong>Carrera:</strong> Ingeniería de Sistemas</p>
+            <p class="descripcion">
+                Estudiante de Ingeniería de Sistemas con interés en el desarrollo de software,
+                programación y tecnologías modernas. Me caracterizo por ser responsable,
+                organizado y con capacidad de adaptación. Busco seguir creciendo profesionalmente
+                mientras aplico mis conocimientos en proyectos reales.
             </p>
         </div>
+    </header>
+
+    <h2>Información Personal</h2>
+    <div class="info-grid">
+        <p><strong>Ciudad:</strong> Vijes</p>
+        <p><strong>Nacionalidad:</strong> Colombia</p>
+        <p><strong>Estado civil:</strong> Soltero</p>
+        <p><strong>Disponibilidad:</strong> Tiempo parcial / prácticas</p>
     </div>
 
-    <h2>Presentación</h2>
-    <p>
-        Estudiante de Ingeniería de Sistemas con interés en el desarrollo de software,
-        bases de datos y tecnologías modernas. Me caracterizo por mi responsabilidad,
-        aprendizaje rápido y buenas habilidades de comunicación.
-    </p>
+    <h2>Experiencia Laboral</h2>
 
-    <h2>Información Académica</h2>
-    <ul>
-        <li>
-            <strong>Ingeniería de Sistemas</strong> – Universidad Santiago de Cali  
-            <br>Octavo semestre (en curso)
-        </li>
-        <li>
-            <strong>Técnico en Contabilidad</strong> – I.E. San Francisco Javier  
-            <br>Graduado
-        </li>
+    <form>
+        <input type="text" id="inputEmpleo" placeholder="Agregar nuevo empleo">
+        <button id="btnEmpleo" class="btn-agregar">Agregar</button>
+    </form>
+
+    <ul id="listaEmpleos">
+        <li>Ventas y atención al cliente en joyería</li>
+        <li>Trabajo en equipo en proyectos universitarios</li>
     </ul>
 
-    <h2>Experiencia Laboral</h2>
+    <h2>Educación</h2>
     <ul>
-        <li>Ventas y atención al cliente en joyería</li>
+        <li>Ingeniería de Sistemas - Universidad (En curso)</li>
+        <li>Bachiller académico</li>
     </ul>
 
     <h2>Habilidades Técnicas</h2>
-    <div class="skills">
+
+    <form>
+        <input type="text" id="inputSkill" placeholder="Agregar nueva habilidad">
+        <button id="btnSkill" class="btn-agregar">Agregar</button>
+    </form>
+
+    <div class="skills" id="listaSkills">
         <div class="skill">C++</div>
         <div class="skill">Java</div>
         <div class="skill">Python</div>
-        <div class="skill">C#</div>
-        <div class="skill">Bases de Datos</div>
-        <div class="skill">React</div>
-        <div class="skill">FastAPI</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
     </div>
 
-    <h2>Idiomas</h2>
-    <ul>
-        <li>Español: Nativo</li>
-        <li>Inglés: Básico</li>
-    </ul>
-
-    <footer>
-        © 2026 · Hoja de Vida – Julián Agudelo
-    </footer>
+    <h2>Contacto</h2>
+    <div class="contacto">
+        <p><strong>Email:</strong> bedoyaalejandrojulian@gmail.com</p>
+        <p><strong>Teléfono:</strong> +57 311 768 8302</p>
+        <p><strong>GitHub:</strong> https://github.com/JulianAgudelo7</p>
+    </div>
 
 </div>
+
+<script>
+
+// EMPLEOS
+const listaEmpleos = document.getElementById("listaEmpleos");
+const inputEmpleo = document.getElementById("inputEmpleo");
+const btnEmpleo = document.getElementById("btnEmpleo");
+
+btnEmpleo.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const nuevoEmpleo = inputEmpleo.value;
+    inputEmpleo.value = "";
+
+    const listItem = document.createElement("li");
+    const texto = document.createElement("span");
+    const botonEliminar = document.createElement("button");
+
+    texto.textContent = nuevoEmpleo;
+    botonEliminar.textContent = "Quitar";
+    botonEliminar.classList.add("btn-quitar");
+
+    listItem.appendChild(texto);
+    listItem.appendChild(botonEliminar);
+    listaEmpleos.appendChild(listItem);
+
+    botonEliminar.addEventListener("click", function() {
+        listaEmpleos.removeChild(listItem);
+    });
+
+    inputEmpleo.focus();
+});
+
+
+// SKILLS
+const listaSkills = document.getElementById("listaSkills");
+const inputSkill = document.getElementById("inputSkill");
+const btnSkill = document.getElementById("btnSkill");
+
+btnSkill.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    const nuevaSkill = inputSkill.value;
+    inputSkill.value = "";
+
+    const skillDiv = document.createElement("div");
+    const texto = document.createElement("span");
+    const botonEliminar = document.createElement("button");
+
+    skillDiv.classList.add("skill");
+
+    texto.textContent = nuevaSkill;
+    botonEliminar.textContent = "Quitar";
+    botonEliminar.classList.add("btn-quitar");
+
+    skillDiv.appendChild(texto);
+    skillDiv.appendChild(botonEliminar);
+    listaSkills.appendChild(skillDiv);
+
+    botonEliminar.addEventListener("click", function() {
+        listaSkills.removeChild(skillDiv);
+    });
+
+    inputSkill.focus();
+});
+
+</script>
 
 </body>
 </html>
